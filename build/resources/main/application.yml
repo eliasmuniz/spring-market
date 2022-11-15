@@ -1,0 +1,36 @@
+spring:
+  profiles:
+    active: dev
+
+server:
+  servlet:
+    context-path: /test-market/api
+
+---
+spring:
+  profiles: dev
+  jpa:
+    database: postgresql
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    continue-on-error: true
+    initialization-mode: always
+    url: jdbc:postgresql://localhost:5433/test
+    username: elias
+    password: admin123
+server:
+  port: 8090
+
+---
+spring:
+  profiles: pdn
+  datasource:
+    url: jdbc:postgresql://172.19.0.3:5432/test
+    username: elias
+    password: admin123
+server:
+  port: 80

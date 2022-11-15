@@ -1,0 +1,24 @@
+version: '3.3'
+
+services:
+  postgres:
+    container_name: "postgresdb-java"
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=test
+      - POSTGRES_USER=elias
+      - POSTGRES_PASSWORD=admin123
+    ports:
+      - 5433:5432
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+  pgadmin:
+    container_name: "pgadmin-java"
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@mail.com
+      - PGADMIN_DEFAULT_PASSWORD=root
+    ports:
+      - 5050:80
+
+
