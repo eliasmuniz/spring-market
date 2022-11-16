@@ -16,7 +16,7 @@ import java.util.Optional;
 @Repository
 public class ProductoRepository implements ProductRepository {
 
-     // Con autowired se le da el control a sprin para la creación de objetos
+     // Con autowired se le da el control a spring para la creación de objetos
     @Autowired
     private ProductoCrudRepository productoCrudRepository;
     @Autowired
@@ -54,10 +54,9 @@ public class ProductoRepository implements ProductRepository {
     }
 
     @Override
-    public Product saveProduct(Product product){
+    public Product save(Product product) {
         Producto producto = mapper.toProducto(product);
         return mapper.toProduct(productoCrudRepository.save(producto));
     }
-
 
 }

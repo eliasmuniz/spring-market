@@ -9,8 +9,6 @@ public class Categoria {
     @Column(name = "id_categoria")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idCategoria;
-
-    @Column(name = "description")
     private String descripcion;
 
     @Column(name = "estado")

@@ -29,6 +29,6 @@ public interface ProductMapper {
     // Conversión externa
     // indica a mapstruct que la conversión que hacemos acá es la inversa
     @InheritInverseConfiguration
-    @Mapping(target= "codigoBarras", ignore = true)
+    @Mapping(target = "codigoBarras", ignore = true)
     Producto toProducto(Product product);
 }

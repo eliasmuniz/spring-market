@@ -9,16 +9,9 @@ server:
 ---
 spring:
   profiles: dev
-  jpa:
-    database: postgresql
-    show-sql: true
-    generate-ddl: true
-    hibernate:
-      ddl-auto: create
   datasource:
     driver-class-name: org.postgresql.Driver
     continue-on-error: true
-    initialization-mode: always
     url: jdbc:postgresql://localhost:5433/test
     username: elias
     password: admin123

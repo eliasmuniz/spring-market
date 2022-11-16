@@ -27,8 +27,8 @@ public class ProductService {
         return productRepository.getByCategory(categoryId);
     }
 
-    public Product saveProduct(Product product){
-        return productRepository.saveProduct(product);
+    public Product save(Product product){
+        return productRepository.save(product);
     }
 
     public boolean delete(int productId){

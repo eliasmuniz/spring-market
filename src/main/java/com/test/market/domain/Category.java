@@ -1,16 +1,16 @@
 package com.test.market.domain;
 
 public class Category {
-    private int categoruId;
+    private int categoryId;
     private String category;
     private boolean active;
 
-    public int getCategoruId() {
-        return categoruId;
+    public int getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategoruId(int categoruId) {
-        this.categoruId = categoruId;
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getCategory() {
